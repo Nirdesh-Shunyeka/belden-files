@@ -6,7 +6,7 @@ spec:
   selector:
     app: knote
   ports:
-    - port: 80
+    - port: 3001
       targetPort: 3000
       nodePort: 30002
   type: NodePort
@@ -16,7 +16,7 @@ kind: Deployment
 metadata:
   name: knote
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: knote
